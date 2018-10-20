@@ -23,6 +23,13 @@ $(document).ready(function() {
 							});
 						} // End if
 					});
-
+				$('#contactButton').click(function(e){
+					e.preventDefault();
+					var data=$('#contactForm').serialize();
+					$.post("feedback",data,function(status){
+						alert("Thank you for contacting us "+status+". We will get back to you soon.");
+						window.location.href="/";
+					});	
+				});
 			
 		})

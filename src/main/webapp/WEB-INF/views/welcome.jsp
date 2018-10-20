@@ -1,5 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -31,8 +30,9 @@
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<b><a class="navbar-brand" href="http://localhost:8080/nprservice/">NPR</a></b>
-			
+			<b><a class="navbar-brand"
+				href="https://nprservices.herokuapp.com">NPR</a></b>
+
 			<%-- <span><img src="<c:url value="/img/NPR.png"></c:url>"
 					alt="NPR" style="width:50px; height:40px;margin-top:6px" /></span> --%>
 		</div>
@@ -46,10 +46,64 @@
 		</div>
 	</div>
 	</nav>
-	<div class="jumbotron text-center">
+	<!-- <div class="jumbotron text-center">
 		<h1>NPR Services</h1>
 		<p>You Name It We Do It</p>
+	</div> -->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+			<li data-target="#myCarousel" data-slide-to="4"></li>
+			<li data-target="#myCarousel" data-slide-to="5"></li>
+			<li data-target="#myCarousel" data-slide-to="6"></li>
+			<li data-target="#myCarousel" data-slide-to="7"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="<c:url value="/img/carousel/1.jpg"></c:url>" class="img-responsive carousel-img" style="height:50px" alt="Opening file">
+			</div>
+			
+			<div class="item">
+				<img src="<c:url value="/img/carousel/2.jpg"></c:url>" class="img-responsive  carousel-img" style="height:50px" alt="analyzing">
+			</div>
+
+			<div class="item">
+				<img src="<c:url value="/img/carousel/3.jpg"></c:url>" class="img-responsive  carousel-img" style="height:50px" alt="cleaning">
+			</div>
+			<div class="item">
+				<img src="<c:url value="/img/carousel/4.jpg"></c:url>" class="img-responsive  carousel-img" style="height:50px" alt="cleaning">
+			</div>
+			<div class="item">
+				<img src="<c:url value="/img/carousel/5.jpg"></c:url>" class="img-responsive  carousel-img" style="height:50px" alt="cleaning">
+			</div>
+			<div class="item">
+				<img src="<c:url value="/img/carousel/6.jpg"></c:url>" class="img-responsive  carousel-img" style="height:50px" alt="cleaning">
+			</div>
+			<div class="item">
+				<img src="<c:url value="/img/carousel/7.jpg"></c:url>" class="img-responsive  carousel-img" style="height:50px" alt="cleaning">
+			</div>
+			<div class="item">
+				<img src="<c:url value="/img/carousel/8.jpg"></c:url>" class="img-responsive  carousel-img" style="height:50px" alt="cleaning">
+			</div>
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span> <span
+			class="sr-only">Previous</span>
+		</a> <a class="right carousel-control" href="#myCarousel"
+			data-slide="next"> <span
+			class="glyphicon glyphicon-chevron-right"></span> <span
+			class="sr-only">Next</span>
+		</a>
 	</div>
+	
 	<div id="about" class="container-fluid">
 		<div class="row">
 			<div class="col-sm-8">
@@ -60,7 +114,9 @@
 					libraries(maintenance of books and AMCs), computer hardware,
 					software installations, manpower supply and many more. We are
 					always available for you.</p>
-				<button onclick="window.location.href = 'http://localhost:8080/nprservice/#contact';" class="btn btn-default btn-lg">Get in Touch</button>
+				<button
+					onclick="window.location.href = 'https://nprservices.herokuapp.com/#contact';"
+					class="btn btn-default btn-lg">Get in Touch</button>
 			</div>
 			<div class="col-sm-4">
 				<span class="glyphicon glyphicon-signal logo"></span>
@@ -96,18 +152,18 @@
 			<div class="col-sm-4">
 				<span><img
 					src="<c:url value="/img/tech-support.jpg"></c:url>"
-					alt="it assistance" class="img-responsive img-size" /></span>
+					alt="it assistance" class="img-responsive img-size img-transition" /></span>
 				<h4>IT Assistance</h4>
 			</div>
 			<div class="col-sm-4">
 				<span><img src="<c:url value="/img/clerical.jpg"></c:url>"
-					alt="clerical" class="img-responsive img-size" /></span>
+					alt="clerical" class="img-responsive img-size img-transition" /></span>
 				<h4>Clerical Process Operations</h4>
 			</div>
 
 			<div class="col-sm-4">
 				<span><img src="<c:url value="/img/deo.png"></c:url>"
-					alt="DEO" class="img-responsive img-size" /></span>
+					alt="DEO" class="img-responsive img-size img-transition" /></span>
 				<h4>Data Entry Operations</h4>
 			</div>
 		</div>
@@ -115,57 +171,59 @@
 			<div class="col-sm-4">
 				<span><img
 					src="<c:url value="/img/computer-hardware.png"></c:url>"
-					alt="ComputerHardware" class="img-responsive img-size" /></span>
+					alt="ComputerHardware" class="img-responsive img-size img-transition" /></span>
 				<h4>Computer Hardware</h4>
 			</div>
 			<div class="col-sm-4">
 				<span><img src="<c:url value="/img/book-shelf.jpg"></c:url>"
-					alt="book-shelf" class="img-responsive img-size" /></span>
+					alt="book-shelf" class="img-responsive img-size img-transition" /></span>
 				<h4>Library Management</h4>
 			</div>
 
 			<div class="col-sm-4">
 				<span><img src="<c:url value="/img/research.png"></c:url>"
-					alt="research" class="img-responsive img-size" /></span>
+					alt="research" class="img-responsive img-size img-transition" /></span>
 				<h4>R & D Operations</h4>
 			</div>
 		</div>
 	</div>
+
+	
 	<div id="lmrp" class="container-fluid text-center bg-grey">
 		<h2>LMRP Process</h2>
 		<br>
 		<div class="row">
 			<div class="col-sm-3">
 				<span><img src="<c:url value="/img/bookshelfp.png"></c:url>"
-					alt="library" class="img-responsive img-size" /></span>
+					alt="library" class="img-responsive img-size img-transition" /></span>
 				<h4>Library</h4>
 			</div>
 			<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
 				<span><img src="<c:url value="/img/arrow-down.png"></c:url>"
-					alt="->" class="img-responsive img-size" /></span>
+					alt="->" class="img-responsive img-size img-transition" /></span>
 			</div>
 			<div class="col-sm-2 hidden-xs">
 				<span><img src="<c:url value="/img/arrow.jpg"></c:url>"
-					alt="->" class="img-responsive img-size" /></span>
+					alt="->" class="img-responsive img-size img-transition" /></span>
 			</div>
 
 			<div class="col-sm-3">
 				<span><img src="<c:url value="/img/process.png"></c:url>"
-					alt="LMRP" class="img-responsive img-size" /></span>
+					alt="LMRP" class="img-responsive img-size img-transition" /></span>
 				<h4>Preserving books</h4>
 			</div>
 			<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
 				<span><img src="<c:url value="/img/arrow-down.png"></c:url>"
-					alt="->" class="img-responsive img-size" /></span>
+					alt="->" class="img-responsive img-size img-transition" /></span>
 			</div>
 			<div class="col-sm-2 hidden-xs">
 				<span><img src="<c:url value="/img/arrow.jpg"></c:url>"
-					alt="->" class="img-responsive img-size" /></span>
+					alt="->" class="img-responsive img-size img-transition" /></span>
 			</div>
 			<div class="col-sm-2">
 				<span><img
 					src="<c:url value="/img/care-protection.png"></c:url>"
-					alt="take-care" class="img-responsive img-size" /></span>
+					alt="take-care" class="img-responsive img-size img-transition" /></span>
 				<h4>Book Care Done</h4>
 			</div>
 		</div>
@@ -184,31 +242,33 @@
 					8860222467,9540808071,9717370934
 				</p>
 				<p>
-					<span class="glyphicon glyphicon-envelope"></span>rohitmehlawat27@gmail.com
+					<span class="glyphicon glyphicon-envelope"></span>servicesbynprs@gmail.com
 				</p>
 			</div>
-			
-			<form method="POST" id="contactForm" action="feedback" comandName="enquiry">
-			<div class="col-sm-7">
-				<div class="row">
-					<div class="col-sm-6 form-group">
-						<input class="form-control" id="name" name="name"
-							placeholder="Name" type="text" required>
+
+			<form method="POST" id="contactForm" action="feedback"
+				comandName="enquiry">
+				<div class="col-sm-7">
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<input class="form-control" id="name" name="name"
+								placeholder="Name" type="text" required>
+						</div>
+						<div class="col-sm-6 form-group">
+							<input class="form-control" id="email" name="email"
+								placeholder="Email" type="email" required>
+						</div>
 					</div>
-					<div class="col-sm-6 form-group">
-						<input class="form-control" id="email" name="email"
-							placeholder="Email" type="email" required>
+					<textarea class="form-control" id="comments" name="comment"
+						placeholder="Comment" rows="5"></textarea>
+					<br>
+					<div class="row">
+						<div class="col-sm-12 form-group">
+							<button class="btn btn-default pull-right" id="contactButton"
+								type="submit">Send</button>
+						</div>
 					</div>
 				</div>
-				<textarea class="form-control" id="comments" name="comment"
-					placeholder="Comment" rows="5"></textarea>
-				<br>
-				<div class="row">
-					<div class="col-sm-12 form-group">
-						<button class="btn btn-default pull-right" type="submit">Send</button>
-					</div>
-				</div>
-			</div>
 			</form>
 		</div>
 	</div>
@@ -220,6 +280,7 @@
 			href="https://nprservices.herokuapp.com" title="Vist NPR Services">NPRServices</a>
 	</p>
 	</footer>
-	<script type="text/javascript" src="<c:url value="/js/welcome.js"></c:url>"></script>
+	<script type="text/javascript"
+		src="<c:url value="/js/welcome.js"></c:url>"></script>
 </body>
 </html>
